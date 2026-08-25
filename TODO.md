@@ -3,6 +3,11 @@
 未着手または検討中の作業を管理します。完了した仕様変更や不具合修正は、
 必要に応じて `docs/spec_changes.md` または `docs/bug_fixes.md` へ記録します。
 
+## リポジトリ設定
+
+- [x] 共有する VS Code のフォーマット設定を `.vscode/settings.json` に追加する
+- [x] 個人用の `*.code-workspace` を Git の管理対象外にする
+
 ## toggle-checkbox
 
 Scrapbox の内部実装に依存しているため、互換性を優先し、小さな変更単位で

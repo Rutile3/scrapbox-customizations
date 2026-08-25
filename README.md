@@ -24,6 +24,16 @@ GitHub 上の各 `script.js` を実装の正本とし、Scrapbox の解説記事
 - ビルド工程や TypeScript は導入せず、単一の JavaScript ファイルを維持する
 - Scrapbox 側のコードを変更した場合も、同じコミットで `script.js` に反映する
 
+## 開発環境
+
+VS Code で共有するフォーマット設定は [`.vscode/settings.json`](.vscode/settings.json) で管理します。
+
+- JavaScript は VS Code 標準フォーマッターで保存時に整形する
+- インデントは 2 スペースとする
+- 改行コードは LF とする
+- ファイル末尾に改行を追加し、行末の空白を削除する
+- 個人用の `*.code-workspace` は Git の管理対象外とする
+
 ## UserScript の追加手順
 
 1. `src/` 配下に、内容を表す kebab-case のディレクトリを作る
