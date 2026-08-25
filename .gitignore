@@ -1,0 +1,7 @@
+# Editor-specific workspace files
+*.code-workspace
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
