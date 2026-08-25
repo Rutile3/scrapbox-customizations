@@ -78,20 +78,34 @@ setTimeout(() => {
         keydownEvent.dispatch(KEY_CODE.ARROW_RIGHT);
       }
       keydownEvent.dispatch(KEY_CODE.BACKSPACE);
-      const nextCheckboxSymbol = (() => {
-        const lineWithoutLeadingWhitespace = lineText.trimStart();
-        for (const cycle of checkboxCycles) {
-          for (let i = 0; i < cycle.length; i++) {
-            if (lineWithoutLeadingWhitespace.startsWith(cycle[i])) {
-              return cycle[i + 1 < cycle.length ? i + 1 : 0];
-            }
-          }
-        }
-        return target.textContent;
-      })();
+      const nextCheckboxSymbol = getNextCheckboxSymbol(
+        lineText,
+        target.textContent
+      );
       writeText(nextCheckboxSymbol);
     }
   );
+
+  /**
+   * 行頭にある現在のチェック記号から、次の記号を求める。
+   *
+   * @param {string} lineText 判定対象の行テキスト
+   * @param {string} fallbackSymbol 現在の記号を特定できない場合の戻り値
+   * @returns {string} 次に書き込むチェック記号
+   */
+  function getNextCheckboxSymbol(lineText, fallbackSymbol) {
+    const lineWithoutLeadingWhitespace = lineText.trimStart();
+
+    for (const cycle of checkboxCycles) {
+      for (let i = 0; i < cycle.length; i++) {
+        if (lineWithoutLeadingWhitespace.startsWith(cycle[i])) {
+          return cycle[i + 1 < cycle.length ? i + 1 : 0];
+        }
+      }
+    }
+
+    return fallbackSymbol;
+  }
 
   /**
    * 指定した要素が親要素の最初の子要素か判定する。
