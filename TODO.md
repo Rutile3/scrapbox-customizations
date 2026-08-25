@@ -12,7 +12,7 @@ Scrapbox の内部実装に依存しているため、互換性を優先し、�
 
 - [x] `reduce(...concat...)` を `flat()` に置き換える
 - [x] `trim()` を `trimStart()` に置き換える
-- [ ] 関数と主要なデータ構造へ JSDoc を追加する
+- [x] 関数と主要なデータ構造へ JSDoc を追加する
 - [ ] `checkboxSetList` などの変数名を役割が分かる名前へ変更する
 - [ ] `39`、`8` などのキーコードを定数化する
 - [x] `console.log(err)` を `console.error(err)` に変更する
