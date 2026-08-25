@@ -138,7 +138,7 @@ setTimeout(() => {
     return (
       element.tagName === 'SPAN' &&
       targetCharList.includes(element.textContent) &&
-      element.classList.value.split(' ').some((value) => /^c\-\d+$/.test(value))
+      element.classList.value.split(' ').some((value) => /^c-\d+$/.test(value))
     );
   }
 
