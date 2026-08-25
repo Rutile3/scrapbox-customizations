@@ -13,6 +13,8 @@ GitHub 上の各 `script.js` を実装の正本とし、Scrapbox の解説記事
 | [`src/toggle-checkbox/`](src/toggle-checkbox/) | 行頭のチェック記号をクリックして切り替える | 管理中 |
 | `src/insert-checkbox/` | Ctrl+B で未チェック記号を挿入する | ソース入手後に追加予定 |
 
+未着手または検討中の作業は [`TODO.md`](TODO.md) で管理します。
+
 ## 管理方針
 
 - UserScript は `src/` 配下に配置する

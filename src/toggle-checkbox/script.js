@@ -51,7 +51,7 @@ setTimeout(() => {
       try {
         lineString = getCursorLineString();
       } catch (err) {
-        console.log(err);
+        console.error(err);
         return;
       }
       if (!startsWithBoxReg.test(lineString)) return;
