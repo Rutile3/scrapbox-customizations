@@ -7,6 +7,10 @@ setTimeout(() => {
     '^\\s*(' + checkboxSymbols.join('|') + ')'
   );
   const targetProject = scrapbox.Project.name;
+  const KEY_CODE = {
+    BACKSPACE: 8,
+    ARROW_RIGHT: 39,
+  };
 
   /** Scrapbox の入力欄へ keydown イベントを送信する。 */
   class KeydownEvent {
@@ -71,9 +75,9 @@ setTimeout(() => {
         .getBoundingClientRect().left;
       const keydownEvent = new KeydownEvent();
       if (cursorX <= targetX) {
-        keydownEvent.dispatch(39); // →
+        keydownEvent.dispatch(KEY_CODE.ARROW_RIGHT);
       }
-      keydownEvent.dispatch(8); // Backspace
+      keydownEvent.dispatch(KEY_CODE.BACKSPACE);
       const nextCheckboxSymbol = (() => {
         const lineWithoutLeadingWhitespace = lineText.trimStart();
         for (const cycle of checkboxCycles) {
