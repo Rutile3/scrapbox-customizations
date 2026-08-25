@@ -7,6 +7,9 @@ setTimeout(() => {
     '^\\s*(' + checkboxSymbols.join('|') + ')'
   );
   const targetProject = scrapbox.Project.name;
+  const appContainerSelector = '#app-container';
+  const linesSelector = '.lines';
+  const eventNamespace = `click.toggleCheckBox_${targetProject}`;
   const KEY_CODE = {
     BACKSPACE: 8,
     ARROW_RIGHT: 39,
@@ -45,16 +48,13 @@ setTimeout(() => {
   }
 
   // ボックスクリックでオンオフする
-  $('#app-container').off(`click.toggleCheckBox_${targetProject}`, '.lines');
-  $('#app-container').on(
-    `click.toggleCheckBox_${targetProject}`,
-    '.lines',
+  $(appContainerSelector).off(eventNamespace, linesSelector);
+  $(appContainerSelector).on(
+    eventNamespace,
+    linesSelector,
     async (event) => {
       if (scrapbox.Project.name !== targetProject) {
-        $('#app-container').off(
-          `click.toggleCheckBox_${targetProject}`,
-          '.lines'
-        );
+        $(appContainerSelector).off(eventNamespace, linesSelector);
         return;
       }
       const target = event.target;
