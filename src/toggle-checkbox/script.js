@@ -79,7 +79,7 @@ setTimeout(() => {
     await new Promise((resolve) => setTimeout(resolve, 30));
     let lineText;
     try {
-      lineText = getCursorLineString();
+      lineText = getCursorLineText();
     } catch (err) {
       console.error(err);
       return;
@@ -133,12 +133,12 @@ setTimeout(() => {
   }
 
   /**
-   * カーソルがある行の文字列を取得する。
+   * カーソルがある行のテキストを取得する。
    *
-   * @returns {string} カーソル行の文字列
+   * @returns {string} カーソル行のテキスト
    * @throws {TypeError} カーソル行の要素が見つからない場合
    */
-  function getCursorLineString() {
+  function getCursorLineText() {
     return document.querySelector(cursorLineSelector).textContent;
   }
 
