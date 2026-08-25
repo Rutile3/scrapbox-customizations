@@ -55,39 +55,47 @@ setTimeout(() => {
   $(appContainerSelector).on(
     eventNamespace,
     linesSelector,
-    async (event) => {
-      if (scrapbox.Project.name !== targetProject) {
-        $(appContainerSelector).off(eventNamespace, linesSelector);
-        return;
-      }
-      const target = event.target;
-      if (!isFirstElementChild(target) || !isCharSpan(target, checkboxSymbols))
-        return;
-      await new Promise((resolve) => setTimeout(resolve, 30));
-      let lineText;
-      try {
-        lineText = getCursorLineString();
-      } catch (err) {
-        console.error(err);
-        return;
-      }
-      if (!startsWithCheckboxPattern.test(lineText)) return;
-      const targetX = target.getBoundingClientRect().left;
-      const cursorX = document
-        .getElementsByClassName(cursorClassName)[0]
-        .getBoundingClientRect().left;
-      const keydownEvent = new KeydownEvent();
-      if (cursorX <= targetX) {
-        keydownEvent.dispatch(KEY_CODE.ARROW_RIGHT);
-      }
-      keydownEvent.dispatch(KEY_CODE.BACKSPACE);
-      const nextCheckboxSymbol = getNextCheckboxSymbol(
-        lineText,
-        target.textContent
-      );
-      writeText(nextCheckboxSymbol);
-    }
+    handleCheckboxClick
   );
+
+  /**
+   * チェック記号のクリックを処理する。
+   *
+   * @param {{ target: Element }} event クリックイベント
+   * @returns {Promise<void>}
+   */
+  async function handleCheckboxClick(event) {
+    if (scrapbox.Project.name !== targetProject) {
+      $(appContainerSelector).off(eventNamespace, linesSelector);
+      return;
+    }
+    const target = event.target;
+    if (!isFirstElementChild(target) || !isCharSpan(target, checkboxSymbols))
+      return;
+    await new Promise((resolve) => setTimeout(resolve, 30));
+    let lineText;
+    try {
+      lineText = getCursorLineString();
+    } catch (err) {
+      console.error(err);
+      return;
+    }
+    if (!startsWithCheckboxPattern.test(lineText)) return;
+    const targetX = target.getBoundingClientRect().left;
+    const cursorX = document
+      .getElementsByClassName(cursorClassName)[0]
+      .getBoundingClientRect().left;
+    const keydownEvent = new KeydownEvent();
+    if (cursorX <= targetX) {
+      keydownEvent.dispatch(KEY_CODE.ARROW_RIGHT);
+    }
+    keydownEvent.dispatch(KEY_CODE.BACKSPACE);
+    const nextCheckboxSymbol = getNextCheckboxSymbol(
+      lineText,
+      target.textContent
+    );
+    writeText(nextCheckboxSymbol);
+  }
 
   /**
    * 行頭にある現在のチェック記号から、次の記号を求める。
