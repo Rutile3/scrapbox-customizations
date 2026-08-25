@@ -17,6 +17,7 @@
 - インラインのクリック処理を `handleCheckboxClick` 関数としてイベント登録から分離。処理順序とjQueryのイベント委譲は維持
 - CSS クラスの判定を `classList.value` の空白分割から `DOMTokenList` の直接走査へ変更。`c-数字` の判定条件は維持
 - チェック記号の判定関数を `isCharSpan` から `isCheckboxSymbolSpan` に変更し、引数名とJSDocも責務に合わせて整理。判定条件は維持
+- 入力欄への書き込み関数を `writeText` から `writeToTextInput` に変更し、input イベント送信を含む責務をJSDocへ明記。DOM操作は維持
 
 ### 開発環境
 

@@ -98,7 +98,7 @@ setTimeout(() => {
       lineText,
       target.textContent
     );
-    writeText(nextCheckboxSymbol);
+    writeToTextInput(nextCheckboxSymbol);
   }
 
   /**
@@ -158,12 +158,12 @@ setTimeout(() => {
   }
 
   /**
-   * Scrapbox の入力欄へ文字列を書き込む。
+   * Scrapbox の入力欄へ文字列を書き込み、input イベントを送信する。
    *
    * @param {string} text 書き込む文字列
    * @returns {void}
    */
-  function writeText(text) {
+  function writeToTextInput(text) {
     const textArea = document.getElementById(textInputId);
     textArea.value = text;
     textArea.dispatchEvent(
