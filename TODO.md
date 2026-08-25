@@ -10,7 +10,7 @@ Scrapbox の内部実装に依存しているため、互換性を優先し、�
 
 ### 安全性が高い変更
 
-- [ ] `reduce(...concat...)` を `flat()` に置き換える
+- [x] `reduce(...concat...)` を `flat()` に置き換える
 - [ ] `trim()` を `trimStart()` に置き換える
 - [ ] 関数と主要なデータ構造へ JSDoc を追加する
 - [ ] `checkboxSetList` などの変数名を役割が分かる名前へ変更する

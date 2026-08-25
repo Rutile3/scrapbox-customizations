@@ -2,10 +2,7 @@ setTimeout(() => {
   // チェックボックスとして使用する文字セットのリスト
   const checkboxSetList = [['⬜', '✅']];
 
-  const allBoxes = checkboxSetList.reduce(
-    (accu, current) => accu.concat(current),
-    []
-  );
+  const allBoxes = checkboxSetList.flat();
   const startsWithBoxReg = new RegExp('^\\s*(' + allBoxes.join('|') + ')');
   const targetProject = scrapbox.Project.name;
 
