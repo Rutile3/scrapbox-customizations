@@ -18,8 +18,8 @@ setTimeout(() => {
     ARROW_RIGHT: 39,
   };
 
-  /** Scrapbox の入力欄へ keydown イベントを送信する。 */
-  class KeydownEvent {
+  /** Scrapbox の入力欄へ keydown イベントを送信するクラス。 */
+  class KeydownEventDispatcher {
     constructor() {
       this.textArea = document.getElementById(textInputId);
       this.event = document.createEvent('UIEvent');
@@ -89,11 +89,11 @@ setTimeout(() => {
     const cursorX = document
       .getElementsByClassName(cursorClassName)[0]
       .getBoundingClientRect().left;
-    const keydownEvent = new KeydownEvent();
+    const keydownEventDispatcher = new KeydownEventDispatcher();
     if (cursorX <= targetX) {
-      keydownEvent.dispatch(KEY_CODE.ARROW_RIGHT);
+      keydownEventDispatcher.dispatch(KEY_CODE.ARROW_RIGHT);
     }
-    keydownEvent.dispatch(KEY_CODE.BACKSPACE);
+    keydownEventDispatcher.dispatch(KEY_CODE.BACKSPACE);
     const nextCheckboxSymbol = getNextCheckboxSymbol(
       lineText,
       target.textContent

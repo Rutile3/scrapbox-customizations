@@ -14,7 +14,7 @@ Scrapbox の内部実装に依存しているため、互換性を優先し、�
 - [ ] 正規表現へ埋め込むチェック記号をエスケープする
 - [ ] DOM 要素取得時の null チェックを追加する
 - [ ] keydown イベントを送信ごとに生成する
-- [ ] `KeydownEvent` の責務と実装を整理する
+- [ ] `KeydownEventDispatcher` の責務と実装を整理する
 
 各項目は個別のコミットとし、DOM や疑似 keydown イベントに関係する変更は
 Scrapbox 上でも確認します。
