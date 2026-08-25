@@ -9,6 +9,9 @@ setTimeout(() => {
   const targetProject = scrapbox.Project.name;
   const appContainerSelector = '#app-container';
   const linesSelector = '.lines';
+  const textInputId = 'text-input';
+  const cursorLineSelector = '.lines div.line.cursor-line';
+  const cursorClassName = 'cursor';
   const eventNamespace = `click.toggleCheckBox_${targetProject}`;
   const KEY_CODE = {
     BACKSPACE: 8,
@@ -18,7 +21,7 @@ setTimeout(() => {
   /** Scrapbox の入力欄へ keydown イベントを送信する。 */
   class KeydownEvent {
     constructor() {
-      this.textArea = document.getElementById('text-input');
+      this.textArea = document.getElementById(textInputId);
       this.event = document.createEvent('UIEvent');
       this.event.initEvent('keydown', true, true);
     }
@@ -71,7 +74,7 @@ setTimeout(() => {
       if (!startsWithCheckboxPattern.test(lineText)) return;
       const targetX = target.getBoundingClientRect().left;
       const cursorX = document
-        .getElementsByClassName('cursor')[0]
+        .getElementsByClassName(cursorClassName)[0]
         .getBoundingClientRect().left;
       const keydownEvent = new KeydownEvent();
       if (cursorX <= targetX) {
@@ -124,7 +127,7 @@ setTimeout(() => {
    * @throws {TypeError} カーソル行の要素が見つからない場合
    */
   function getCursorLineString() {
-    return document.querySelector('.lines div.line.cursor-line').textContent;
+    return document.querySelector(cursorLineSelector).textContent;
   }
 
   /**
@@ -149,7 +152,7 @@ setTimeout(() => {
    * @returns {void}
    */
   function writeText(text) {
-    const textArea = document.getElementById('text-input');
+    const textArea = document.getElementById(textInputId);
     textArea.value = text;
     textArea.dispatchEvent(
       new InputEvent('input', { bubbles: true, cancelable: true })
