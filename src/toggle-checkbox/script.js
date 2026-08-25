@@ -1,9 +1,11 @@
 setTimeout(() => {
   /** @type {string[][]} チェック状態として循環させる文字列の組み合わせ。 */
-  const checkboxSetList = [['⬜', '✅']];
+  const checkboxCycles = [['⬜', '✅']];
 
-  const allBoxes = checkboxSetList.flat();
-  const startsWithBoxReg = new RegExp('^\\s*(' + allBoxes.join('|') + ')');
+  const checkboxSymbols = checkboxCycles.flat();
+  const startsWithCheckboxPattern = new RegExp(
+    '^\\s*(' + checkboxSymbols.join('|') + ')'
+  );
   const targetProject = scrapbox.Project.name;
 
   /** Scrapbox の入力欄へ keydown イベントを送信する。 */
@@ -52,16 +54,17 @@ setTimeout(() => {
         return;
       }
       const target = event.target;
-      if (!isFirstElementChild(target) || !isCharSpan(target, allBoxes)) return;
+      if (!isFirstElementChild(target) || !isCharSpan(target, checkboxSymbols))
+        return;
       await new Promise((resolve) => setTimeout(resolve, 30));
-      let lineString;
+      let lineText;
       try {
-        lineString = getCursorLineString();
+        lineText = getCursorLineString();
       } catch (err) {
         console.error(err);
         return;
       }
-      if (!startsWithBoxReg.test(lineString)) return;
+      if (!startsWithCheckboxPattern.test(lineText)) return;
       const targetX = target.getBoundingClientRect().left;
       const cursorX = document
         .getElementsByClassName('cursor')[0]
@@ -71,18 +74,18 @@ setTimeout(() => {
         keydownEvent.dispatch(39); // →
       }
       keydownEvent.dispatch(8); // Backspace
-      const newBox = (() => {
-        const trimmedLineString = lineString.trimStart();
-        for (const checkboxSet of checkboxSetList) {
-          for (let i = 0; i < checkboxSet.length; i++) {
-            if (trimmedLineString.startsWith(checkboxSet[i])) {
-              return checkboxSet[i + 1 < checkboxSet.length ? i + 1 : 0];
+      const nextCheckboxSymbol = (() => {
+        const lineWithoutLeadingWhitespace = lineText.trimStart();
+        for (const cycle of checkboxCycles) {
+          for (let i = 0; i < cycle.length; i++) {
+            if (lineWithoutLeadingWhitespace.startsWith(cycle[i])) {
+              return cycle[i + 1 < cycle.length ? i + 1 : 0];
             }
           }
         }
         return target.textContent;
       })();
-      writeText(newBox);
+      writeText(nextCheckboxSymbol);
     }
   );
 
