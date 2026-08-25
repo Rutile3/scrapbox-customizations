@@ -20,6 +20,8 @@
 - 入力欄への書き込み関数を `writeText` から `writeToTextInput` に変更し、input イベント送信を含む責務をJSDocへ明記。DOM操作は維持
 - カーソル行取得関数を `getCursorLineString` から `getCursorLineText` に変更し、JSDocの用語をDOMのテキスト取得に合わせて統一。取得方法は維持
 - keydown イベント送信クラスを `KeydownEvent` から `KeydownEventDispatcher` に変更し、インスタンス名とJSDocも送信責務に合わせて整理。イベント処理は維持
+- クリックイベントの `target` が `Element` であることを確認してからDOM判定を行うように変更
+- `target` が `null` または `Element` 以外の場合は、安全に処理を終了するように機能を修正
 
 ### 開発環境
 

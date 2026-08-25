@@ -61,7 +61,7 @@ setTimeout(() => {
   /**
    * チェック記号のクリックを処理する。
    *
-   * @param {{ target: Element }} event クリックイベント
+   * @param {{ target: EventTarget | null }} event クリックイベント
    * @returns {Promise<void>}
    */
   async function handleCheckboxClick(event) {
@@ -70,6 +70,7 @@ setTimeout(() => {
       return;
     }
     const target = event.target;
+    if (!(target instanceof Element)) return;
     if (
       !isFirstElementChild(target) ||
       !isCheckboxSymbolSpan(target, checkboxSymbols)
