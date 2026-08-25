@@ -70,8 +70,12 @@ setTimeout(() => {
       return;
     }
     const target = event.target;
-    if (!isFirstElementChild(target) || !isCharSpan(target, checkboxSymbols))
+    if (
+      !isFirstElementChild(target) ||
+      !isCheckboxSymbolSpan(target, checkboxSymbols)
+    ) {
       return;
+    }
     await new Promise((resolve) => setTimeout(resolve, 30));
     let lineText;
     try {
@@ -139,16 +143,16 @@ setTimeout(() => {
   }
 
   /**
-   * 要素が対象のチェック記号を表示する文字用 span か判定する。
+   * 要素が対象のチェック記号を表示する span か判定する。
    *
    * @param {Element} element 判定対象の要素
-   * @param {string[]} targetCharList 対象となるチェック記号
-   * @returns {boolean} 対象の span であれば true
+   * @param {string[]} targetSymbols 対象となるチェック記号
+   * @returns {boolean} 対象のチェック記号を表示する span であれば true
    */
-  function isCharSpan(element, targetCharList) {
+  function isCheckboxSymbolSpan(element, targetSymbols) {
     return (
       element.tagName === 'SPAN' &&
-      targetCharList.includes(element.textContent) &&
+      targetSymbols.includes(element.textContent) &&
       [...element.classList].some((className) => /^c-\d+$/.test(className))
     );
   }
