@@ -62,7 +62,7 @@ setTimeout(() => {
       }
       keydownEvent.dispatch(8); // Backspace
       const newBox = (() => {
-        const trimmedLineString = lineString.trim();
+        const trimmedLineString = lineString.trimStart();
         for (const checkboxSet of checkboxSetList) {
           for (let i = 0; i < checkboxSet.length; i++) {
             if (trimmedLineString.startsWith(checkboxSet[i])) {
