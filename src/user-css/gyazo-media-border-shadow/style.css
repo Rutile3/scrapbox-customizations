@@ -1,0 +1,7 @@
+main.page img.image[alt="Gyazo"],
+main.page video.gyazo.image,
+main.page div.gyazo.oembed.square > iframe,
+main.page div.gyazo.oembed.landscape > iframe {
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
+}

@@ -20,3 +20,9 @@
 - `[| キー入力]` をキーボードのキー風に表示するUserCSSを `src/user-css/keyboard-key/style.css` に追加
 - `|` 装飾へ余白、枠線、外側の余白、および角丸を設定
 - Scrapbox掲載コードと同じく、ビルドせずにコピーできる単一のCSSファイルとして管理
+
+### gyazo-media-border-shadow
+
+- Gyazo画像と動画へ境界線と影を付けるUserCSSを `src/user-css/gyazo-media-border-shadow/style.css` に追加
+- ページ本文内のGyazo画像、動画、および正方形・横長の埋め込み動画を対象に指定
+- Scrapbox掲載コードと同じく、ビルドせずにコピーできる単一のCSSファイルとして管理
