@@ -36,8 +36,8 @@ Scrapbox の初期化タイミングと内部実装への依存を調査し、�
 
 ### 文書整備
 
-- [ ] 対応するチェック記号 `⬜`、`✅` と切替順序を `src/toggle-checkbox/README.md` に記載する
-- [ ] Scrapbox の解説記事の URL が確定したら `src/toggle-checkbox/README.md` にリンクを追加する
+- [ ] 対応するチェック記号 `⬜`、`✅` と切替順序を `src/user-script/toggle-checkbox/README.md` に記載する
+- [ ] Scrapbox の解説記事の URL が確定したら `src/user-script/toggle-checkbox/README.md` にリンクを追加する
 
 ## 運用方法
 

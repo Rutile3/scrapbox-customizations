@@ -4,8 +4,7 @@
 
 ### hashtag-label
 
-- ハッシュタグをラベル風に表示するUserCSSを `src/userstyles/hashtag-label/style.css` に追加
+- ハッシュタグをラベル風に表示するUserCSSを `src/user-css/hashtag-label/style.css` に追加
 - 通常のハッシュタグは青、未作成ページへのリンクは赤系の色で表示
 - ハッシュタグへマウスポインターを合わせたときに、拡大して表示
 - Scrapbox掲載コードと同じく、ビルドせずにコピーできる単一のCSSファイルとして管理
-

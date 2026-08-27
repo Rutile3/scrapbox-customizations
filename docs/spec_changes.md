@@ -1,5 +1,12 @@
 # 仕様変更
 
+## 2026-08-27
+
+### リポジトリ構成
+
+- UserScriptを `src/user-script/`、UserCSSを `src/user-css/` 配下へ分類する構成に変更
+- `toggle-checkbox` を `src/user-script/toggle-checkbox/`、`hashtag-label` を `src/user-css/hashtag-label/` で管理
+
 ## 2026-08-25
 
 ### toggle-checkbox

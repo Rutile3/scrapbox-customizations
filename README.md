@@ -10,14 +10,14 @@ GitHub上の各 `script.js` と `style.css` を実装の正本とし、Scrapbox�
 
 | ディレクトリ | 概要 | 状態 |
 | --- | --- | --- |
-| [`src/toggle-checkbox/`](src/toggle-checkbox/) | 行頭のチェック記号をクリックして切り替える | 管理中 |
-| `src/insert-checkbox/` | Ctrl+B で未チェック記号を挿入する | ソース入手後に追加予定 |
+| [`src/user-script/toggle-checkbox/`](src/user-script/toggle-checkbox/) | 行頭のチェック記号をクリックして切り替える | 管理中 |
+| `src/user-script/insert-checkbox/` | Ctrl+B で未チェック記号を挿入する | ソース入手後に追加予定 |
 
 ## UserCSS
 
 | ディレクトリ | 概要 | 状態 |
 | --- | --- | --- |
-| [`src/userstyles/hashtag-label/`](src/userstyles/hashtag-label/) | ハッシュタグをラベル風に表示する | 管理中 |
+| [`src/user-css/hashtag-label/`](src/user-css/hashtag-label/) | ハッシュタグをラベル風に表示する | 管理中 |
 
 ## 文書
 
@@ -28,7 +28,7 @@ GitHub上の各 `script.js` と `style.css` を実装の正本とし、Scrapbox�
 
 ## 管理方針
 
-- UserScriptとUserCSSは `src/` 配下に配置する
+- UserScriptは `src/user-script/`、UserCSSは `src/user-css/` 配下に配置する
 - 1つのカスタマイズを1ディレクトリで管理する
 - 実装本体は各ディレクトリの `script.js` または `style.css` とする
 - Scrapboxへは実装本体をそのままコピーする
@@ -48,7 +48,7 @@ VS Code で共有するフォーマット設定は [`.vscode/settings.json`](.vs
 
 ## カスタマイズの追加手順
 
-1. `src/` 配下に、内容を表す kebab-case のディレクトリを作る
+1. 種類に応じて `src/user-script/` または `src/user-css/` 配下に、内容を表す kebab-case のディレクトリを作る
 2. `script.js` または `style.css` と簡潔な `README.md` を置く
 3. この README の一覧へ追加する
 4. Scrapboxの解説記事と実装本体の内容が一致することを確認する
