@@ -1,23 +1,20 @@
 a[type="hashTag"] {
   display: inline-block;
-  padding: 2px 8px;
   margin: 0 8px 10px 0;
-  background: inherit;
-  font-size: 0.8em;
+  padding: 2px 8px;
+  border: 2px solid currentColor;
   border-radius: 3px;
-  transition: .3s;
-  -webkit-transform: scale(1);
-  transform: scale(1);
+  background-color: inherit;
   color: #4b7ff5;
-  border: 2px solid #4b7ff5;
+  font-size: 0.8em;
+  transform: scale(1);
+  transition: transform 0.3s;
 }
 
 a[type="hashTag"].empty-page-link {
   color: #ed8362;
-  border: 1px solid #ed8362;
 }
 
 a[type="hashTag"]:hover {
-  -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
