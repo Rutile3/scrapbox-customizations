@@ -26,3 +26,10 @@
 - Gyazo画像と動画へ境界線と影を付けるUserCSSを `src/user-css/gyazo-media-border-shadow/style.css` に追加
 - ページ本文内のGyazo画像、動画、および正方形・横長の埋め込み動画を対象に指定
 - Scrapbox掲載コードと同じく、ビルドせずにコピーできる単一のCSSファイルとして管理
+
+### twitter-share-page-menu
+
+- ページメニューへ「Twitterにシェア」を追加するUserScriptを `src/user-script/twitter-share-page-menu/script.js` に追加
+- 現在のページURLとタイトルから `URLSearchParams` を生成し、Twitterの投稿画面を別ウィンドウで表示
+- URL末尾のピリオドとタイトル内のピリオドがTwitter上で意図せず処理されないように調整
+- Scrapbox掲載コードと同じく、ビルドせずにコピーできる単一のJavaScriptファイルとして管理
