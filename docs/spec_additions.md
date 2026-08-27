@@ -39,3 +39,10 @@
 - PopupMenuへ「Twitterにシェア」を追加するUserScriptを `src/user-script/twitter-share-popup-menu/script.js` に追加
 - 選択文字列を `URLSearchParams` の `text` パラメーターへ設定し、Twitterの投稿画面を別ウィンドウで表示
 - Scrapbox掲載コードと同じく、ビルドせずにコピーできる単一のJavaScriptファイルとして管理
+
+### insert-checkbox
+
+- Ctrl+Bでカーソル位置へ未チェック記号 `⬜` を挿入するUserScriptを `src/user-script/insert-checkbox/script.js` に追加
+- ShiftまたはAltの併用時、キーリピート時、および文字列の範囲選択時は挿入しない
+- Undo履歴を維持したまま挿入するため、非推奨であることを認識したうえで `document.execCommand()` を使用
+- Scrapbox掲載コードと同じく、ビルドせずにコピーできる単一のJavaScriptファイルとして管理

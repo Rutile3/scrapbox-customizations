@@ -11,7 +11,7 @@ GitHub上の各 `script.js` と `style.css` を実装の正本とし、Scrapbox�
 | ディレクトリ | 概要 | 状態 |
 | --- | --- | --- |
 | [`src/user-script/toggle-checkbox/`](src/user-script/toggle-checkbox/) | 行頭のチェック記号をクリックして切り替える | 管理中 |
-| `src/user-script/insert-checkbox/` | Ctrl+B で未チェック記号を挿入する | ソース入手後に追加予定 |
+| [`src/user-script/insert-checkbox/`](src/user-script/insert-checkbox/) | Ctrl+Bで未チェック記号を挿入する | 管理中 |
 | [`src/user-script/twitter-share-page-menu/`](src/user-script/twitter-share-page-menu/) | ページメニューからTwitterへページを共有する | 管理中 |
 | [`src/user-script/twitter-share-popup-menu/`](src/user-script/twitter-share-popup-menu/) | PopupMenuから選択文字列をTwitterへ共有する | 管理中 |
 
