@@ -4,6 +4,23 @@
 変更内容に応じて `docs/spec_additions.md`、`docs/spec_changes.md`、または
 `docs/bug_fixes.md` へ記録します。
 
+## insert-checkbox
+
+### 安全性と責務の整理
+
+- [ ] Cosense の本文編集中だけ処理するため、フォーカスされている要素の判定方法を調査して実装する
+- [ ] チェック記号を挿入できた場合に限り `preventDefault()` で既定の `Ctrl+B` 操作を抑止するか、Cosense 上で競合を確認して判断する
+- [ ] UserScript の再評価時に keydown イベントリスナーが重複登録されない仕組みを追加する
+
+DOM、フォーカス、キーボードイベントに関係する変更は、Cosense 上でも確認します。
+
+### 互換性の調査
+
+- [ ] `document.execCommand('insertText')` の代替方法を調査し、Undo 履歴と Cosense の入力状態を維持できるか検証する
+
+`document.execCommand()` は非推奨ですが、代替手段の検証が完了するまでは、
+Undo 履歴を維持できる現在の実装を継続します。
+
 ## toggle-checkbox
 
 Scrapbox の内部実装に依存しているため、互換性を優先し、小さな変更単位で
