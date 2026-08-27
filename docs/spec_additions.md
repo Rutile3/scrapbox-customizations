@@ -33,3 +33,9 @@
 - 現在のページURLとタイトルから `URLSearchParams` を生成し、Twitterの投稿画面を別ウィンドウで表示
 - URL末尾のピリオドとタイトル内のピリオドがTwitter上で意図せず処理されないように調整
 - Scrapbox掲載コードと同じく、ビルドせずにコピーできる単一のJavaScriptファイルとして管理
+
+### twitter-share-popup-menu
+
+- PopupMenuへ「Twitterにシェア」を追加するUserScriptを `src/user-script/twitter-share-popup-menu/script.js` に追加
+- 選択文字列を `URLSearchParams` の `text` パラメーターへ設定し、Twitterの投稿画面を別ウィンドウで表示
+- Scrapbox掲載コードと同じく、ビルドせずにコピーできる単一のJavaScriptファイルとして管理
