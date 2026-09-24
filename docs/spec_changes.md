@@ -2,6 +2,11 @@
 
 ## 2026-09-24
 
+### media-border-shadow
+
+- Gyazo以外の画像も対象になったことに合わせ、`src/user-css/gyazo-media-border-shadow/` を `src/user-css/media-border-shadow/` へ改名。CSSの内容は変更なし
+- 本機能のREADME、ルートREADME、およびTODOの名称・参照パスを更新。過去の変更記録の旧名称・旧パスは維持
+
 ### gyazo-media-border-shadow
 
 - 画像のセレクターを `.page img.image[alt="Gyazo"]` から `.page img.image` へ変更。Scrapboxにアップロードした画像を含め、配信元や `alt` 属性を問わずページ本文内の `img.image` に境界線と影を適用

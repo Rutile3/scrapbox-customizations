@@ -38,18 +38,11 @@ Undo 履歴を維持できる現在の実装を継続します。
 - [ ] 通常リンクと未作成ページリンクの文字色について、実際の背景色とのコントラストを確認し、必要なら色を調整する
 - [ ] ホバー時の `scale(1.1)` で隣接するタグや文字へ重なるか確認し、必要なら前面表示を追加する
 
-## gyazo-media-border-shadow
+## media-border-shadow
 
 ### 表示確認
 
 - [ ] 画像への適用範囲を拡張したCSSをScrapboxへ反映し、アップロード画像、Gyazo画像、その他の配信元の `img.image`、および既存のGyazo動画の表示を確認する
-
-### 名称の変更
-
-- [ ] 適用範囲の拡張後、`src/user-css/gyazo-media-border-shadow/` を `src/user-css/media-border-shadow/` へ改名する。本機能の README、ルート README、および TODO の名称・参照パスを更新し、`docs/spec_changes.md` に日本語の変更記録を残す（適用範囲の拡張とは別の1コミット）
-
-改名時は CSS の内容を維持し、リポジトリ内の参照リンクが新しいパスを指すことを確認します。
-過去の変更記録にある旧名称・旧パスは、当時の記録として維持します。
 
 ## toggle-checkbox
 

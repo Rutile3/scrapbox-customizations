@@ -1,4 +1,4 @@
-# gyazo-media-border-shadow
+# media-border-shadow
 
 Scrapbox（Cosense）のページ本文に表示される画像とGyazo動画へ、境界線と影を付ける
 UserCSSです。白い背景の画像でも、ページ背景との境界を判別しやすくします。
