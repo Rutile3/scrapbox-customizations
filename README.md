@@ -22,7 +22,7 @@ GitHub上の各 `script.js` と `style.css` を実装の正本とし、Scrapbox�
 | [`hashtag-label/`](src/user-css/hashtag-label/) | ハッシュタグをラベル風に表示する | 管理中 |
 | [`hide-page-menu-scrollbar/`](src/user-css/hide-page-menu-scrollbar/) | 右上のページメニューに表示されるスクロールバーを隠す | 管理中 |
 | [`keyboard-key/`](src/user-css/keyboard-key/) | &#124; 装飾をキーボードのキー風に表示する | 管理中 |
-| [`gyazo-media-border-shadow/`](src/user-css/gyazo-media-border-shadow/) | Gyazo画像と動画に境界線と影を付ける | 管理中 |
+| [`gyazo-media-border-shadow/`](src/user-css/gyazo-media-border-shadow/) | Scrapboxアップロード画像などの画像とGyazo動画に境界線と影を付ける | 管理中 |
 
 ## 文書
 

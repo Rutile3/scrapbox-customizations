@@ -1,24 +1,24 @@
 # gyazo-media-border-shadow
 
-Scrapbox（Cosense）のページ本文に表示されるGyazo画像と動画へ、境界線と影を付ける
+Scrapbox（Cosense）のページ本文に表示される画像とGyazo動画へ、境界線と影を付ける
 UserCSSです。白い背景の画像でも、ページ背景との境界を判別しやすくします。
 
 ## 使い方
 
 1. [`style.css`](style.css) の内容をScrapboxのUserCSS記事にある `code:style.css` へコピーする
 2. 対象プロジェクトでUserCSSを有効にする
-3. Gyazo画像と、縦長・横長を含むGyazo動画の表示を確認する
+3. Scrapboxにアップロードした画像、Gyazo画像、その他の配信元の画像と、縦長・横長を含むGyazo動画の表示を確認する
 
 実装の正本は `style.css` です。
 
 ## 対象
 
-- Gyazo画像
+- `image` クラスを持つ画像（Scrapboxにアップロードした画像、Gyazo画像、その他の配信元の画像）
 - Gyazo動画
 - 形状クラスを問わないGyazo埋め込み動画
 
-`.page` を付けることで、HTMLのタグ名に依存せず、ページ本文内の要素だけを
-対象にしています。
+`.page` 内の要素だけを対象にしています。画像は `img.image` に一致すれば、
+配信元や `alt` 属性を問いません。
 
 ## 関連記事
 
@@ -26,7 +26,7 @@ UserCSSです。白い背景の画像でも、ページ背景との境界を判�
 
 ## 前提
 
-ScrapboxのGyazo画像・動画に付与されるクラスと埋め込み構造に依存します。
+Scrapboxの画像・Gyazo動画に付与されるクラスと埋め込み構造に依存します。
 `.gyazo.oembed` の直下にある `iframe` を形状クラスにかかわらず対象にします。
 Scrapbox側のDOM仕様変更時には動作確認が必要です。
 

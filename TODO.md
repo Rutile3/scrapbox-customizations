@@ -40,13 +40,16 @@ Undo 履歴を維持できる現在の実装を継続します。
 
 ## gyazo-media-border-shadow
 
-### 画像への適用範囲の拡張
+### 表示確認
 
-- [ ] 画像のセレクターを `.page img.image[alt="Gyazo"]` から `.page img.image` へ変更し、Scrapbox にアップロードした画像にも境界線と影を適用する。対象の拡張を本機能の README とルート README の概要へ反映し、`docs/spec_changes.md` に日本語の変更記録を残す（1コミット）
+- [ ] 画像への適用範囲を拡張したCSSをScrapboxへ反映し、アップロード画像、Gyazo画像、その他の配信元の `img.image`、および既存のGyazo動画の表示を確認する
 
-変更後は、配信元や `alt` 属性を問わず、`.page` 内の `img.image` が対象になります。
-動画のセレクターと境界線・影の指定は維持します。Scrapbox 上でアップロード画像、
-Gyazo画像、その他の配信元の `img.image`、および既存のGyazo動画の表示を確認します。
+### 名称の変更
+
+- [ ] 適用範囲の拡張後、`src/user-css/gyazo-media-border-shadow/` を `src/user-css/media-border-shadow/` へ改名する。本機能の README、ルート README、および TODO の名称・参照パスを更新し、`docs/spec_changes.md` に日本語の変更記録を残す（適用範囲の拡張とは別の1コミット）
+
+改名時は CSS の内容を維持し、リポジトリ内の参照リンクが新しいパスを指すことを確認します。
+過去の変更記録にある旧名称・旧パスは、当時の記録として維持します。
 
 ## toggle-checkbox
 

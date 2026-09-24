@@ -1,5 +1,13 @@
 # 仕様変更
 
+## 2026-09-24
+
+### gyazo-media-border-shadow
+
+- 画像のセレクターを `.page img.image[alt="Gyazo"]` から `.page img.image` へ変更。Scrapboxにアップロードした画像を含め、配信元や `alt` 属性を問わずページ本文内の `img.image` に境界線と影を適用
+- Gyazo動画のセレクターと、`box-sizing`・境界線・影の指定は維持
+- 本機能のREADMEとルートREADMEへ対象の拡張を反映
+
 ## 2026-08-27
 
 ### hashtag-label
