@@ -12,7 +12,7 @@ setTimeout(() => {
   const textInputId = 'text-input';
   const cursorLineSelector = '.lines div.line.cursor-line';
   const cursorClassName = 'cursor';
-  const eventNamespace = `click.toggleCheckBox_${targetProject}`;
+  const listenerKey = Symbol.for('scrapbox-customizations.toggle-checkbox.cleanup');
   const KEY_CODE = {
     BACKSPACE: 8,
     ARROW_RIGHT: 39,
@@ -50,13 +50,33 @@ setTimeout(() => {
     }
   }
 
-  // ボックスクリックでオンオフする
-  $(appContainerSelector).off(eventNamespace, linesSelector);
-  $(appContainerSelector).on(
-    eventNamespace,
-    linesSelector,
-    handleCheckboxClick
-  );
+  // 再評価前の登録は、プロジェクトやコンテナーが変わっていても解除する。
+  window[listenerKey]?.();
+  const appContainer = document.querySelector(appContainerSelector);
+  if (!appContainer) return;
+  let active = true;
+  window[listenerKey] = cleanup;
+  appContainer.addEventListener('click', handleDelegatedClick);
+
+  /** この評価で登録したリスナーと、待機中の切替処理を無効にする。 */
+  function cleanup() {
+    active = false;
+    appContainer.removeEventListener('click', handleDelegatedClick);
+    if (window[listenerKey] === cleanup) delete window[listenerKey];
+  }
+
+  /** @param {MouseEvent} event コンテナー内のクリックイベント */
+  function handleDelegatedClick(event) {
+    if (scrapbox.Project.name !== targetProject) {
+      cleanup();
+      return;
+    }
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+    const lines = target.closest(linesSelector);
+    if (!lines || lines === appContainer || !appContainer.contains(lines)) return;
+    void handleCheckboxClick(event);
+  }
 
   /**
    * チェック記号のクリックを処理する。
@@ -66,7 +86,7 @@ setTimeout(() => {
    */
   async function handleCheckboxClick(event) {
     if (scrapbox.Project.name !== targetProject) {
-      $(appContainerSelector).off(eventNamespace, linesSelector);
+      cleanup();
       return;
     }
     const target = event.target;
@@ -78,6 +98,11 @@ setTimeout(() => {
       return;
     }
     await new Promise((resolve) => setTimeout(resolve, 30));
+    if (!active) return;
+    if (scrapbox.Project.name !== targetProject) {
+      cleanup();
+      return;
+    }
     let lineText;
     try {
       lineText = getCursorLineText();
