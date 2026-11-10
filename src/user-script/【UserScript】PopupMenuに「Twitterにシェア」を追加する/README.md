@@ -1,4 +1,4 @@
-# 【Scrapbox】PopupMenuに「Twitterにシェア」を追加する
+# 【UserScript】PopupMenuに「Twitterにシェア」を追加する
 
 Scrapbox（Cosense）のPopupMenuへ「Twitterにシェア」を追加し、選択した文字列が
 入力された状態でTwitterの投稿画面を開くUserScriptです。
@@ -22,7 +22,7 @@ Scrapbox（Cosense）のPopupMenuへ「Twitterにシェア」を追加し、選�
 
 ## 関連記事
 
-- [【Scrapbox】PopupMenuに「Twitterにシェア」を追加する](https://scrapbox.io/Rutile3-Tech/%E3%80%90Scrapbox%E3%80%91PopupMenu%E3%81%AB%E3%80%8CTwitter%E3%81%AB%E3%82%B7%E3%82%A7%E3%82%A2%E3%80%8D%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B)
+- [【UserScript】PopupMenuに「Twitterにシェア」を追加する](https://scrapbox.io/Rutile3-Tech/%E3%80%90UserScript%E3%80%91PopupMenu%E3%81%AB%E3%80%8CTwitter%E3%81%AB%E3%82%B7%E3%82%A7%E3%82%A2%E3%80%8D%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B)
 
 ## 前提
 
