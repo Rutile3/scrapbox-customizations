@@ -1,11 +1,13 @@
 【UserCSS】ページメニューのスクロールバーを非表示にする
 [*** 概要]
-PCで[Scrapbox]を横幅767pxのウィンドウで表示すると、ページメニューに横スクロールバーが表示される。
-それを防ぐ[UserCSS]を作成しました。
+[Cosense]（旧[Scrapbox]）の右上のページメニューに表示されるスクロールバーを隠す[UserCSS]。
+作成当時、PCで横幅767pxのウィンドウにすると横スクロールバーが表示されたため作成しました。
 [https://gyazo.com/56c707e1f7c208613c89a39cd6b9f772]
 
 
 [*** 環境]
+以下は作成当時の確認環境。
+現在のCosenseで同じ条件の現象が発生するかは未確認。
 　OS：Windows 10 Home
 　　バージョン：22H2
 　ブラウザ：Google Chrome
@@ -13,6 +15,9 @@ PCで[Scrapbox]を横幅767pxのウィンドウで表示すると、ページメ
 
 
 [*** なぜスクロールバーが表示されるのか？]
+以下は作成当時の標準CSSを参照した調査記録。
+現在の標準CSSや発生原因を確認したものではない。
+
 おそらく、[app.css]の以下の記述の`overflow-x: scroll;`の影響で横スクロールバーが表示されている。
 　モバイル端末だと表示されないので、これ以外の原因もあるかもしれない…
 code:app.css
@@ -28,17 +33,26 @@ code:app.css
 
 
 [*** 解決方法]
-下記のUserCSSを適用する。
+[** 導入方法]
+自分のUserCSS記事の`code:style.css`へ、下記のCSSをコピーする。
+右上のページメニューの表示を確認する。
 
 code:style.css
  .expandable-menu .page-menu {
    overflow: hidden;
  }
+
+[** 仕組み]
+ `.expandable-menu .page-menu`に一致するページメニューへ適用する。
+ `overflow: hidden`で横方向・縦方向のはみ出した内容を隠し、両方向のスクロールバーを非表示にする。
+ メニューの幅や高さを広げたり、項目が収まるように並べ替えたりする処理は含まない。
+
 [** 追記]
 　`scrapbox.PageMenu.addMenu()`を使用すると縦スクロールバーが表示される現象が発生したため、`overflow-x`から`overflow`に変更しました。
 
 
 [*** 使用例]
+以下は作成当時の適用前後の例。
 [** 適用前]
 [https://gyazo.com/55ee8d4aeadde525c14ef0674679d3eb][https://gyazo.com/c1409506369685a00c2ac4ad199fc49b]
 
