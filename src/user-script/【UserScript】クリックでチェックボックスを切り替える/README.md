@@ -1,4 +1,4 @@
-# 【UserScript】クリックでON/OFFできるチェックボックス
+# 【UserScript】クリックでチェックボックスを切り替える
 
 Scrapbox の行頭にあるチェック記号をクリックし、未完了・完了の状態を
 切り替える UserScript です。
@@ -17,9 +17,7 @@ Scrapbox の行頭にあるチェック記号をクリックし、未完了・�
 
 ## 関連記事
 
-- [【UserScript】クリックでON/OFFできるチェックボックス](https://scrapbox.io/Rutile3-Tech/%E3%80%90UserScript%E3%80%91%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%A7ON%2FOFF%E3%81%A7%E3%81%8D%E3%82%8B%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9)
-
-ディレクトリ名では、Windowsのファイル名制約に合わせて記事名の `/` を `／` に置換しています。
+- [【UserScript】クリックでチェックボックスを切り替える](https://scrapbox.io/Rutile3-Tech/%E3%80%90UserScript%E3%80%91%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%A7%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9%E3%82%92%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88%E3%82%8B)
 
 ## 前提
 
