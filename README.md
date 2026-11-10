@@ -52,6 +52,29 @@ VS Code で共有するフォーマット設定は [`.vscode/settings.json`](.vs
 - ファイル末尾に改行を追加し、行末の空白を削除する
 - 個人用の `*.code-workspace` は Git の管理対象外とする
 
+### Scrapbox標準JS・CSSの取得
+
+UserScript・UserCSSの作成・修正・不具合調査の前に、Windowsで次のバッチを手動実行します。
+Windows PowerShell 5.1とインターネット接続が必要です。バッチは同じフォルダーのPowerShellスクリプトを呼び出します。
+
+```bat
+scripts\fetch-scrapbox-assets.bat
+```
+
+保存先はリポジトリ内の `references/scrapbox/` です。実行時のカレントディレクトリには依存しません。
+
+| 保存ファイル | 取得元 |
+| --- | --- |
+| `index.js` | `https://scrapbox.io/assets/index.js` |
+| `app.css` | `https://scrapbox.io/assets/css/app.css` |
+| `metadata.json` | ファイルごとの取得日時（タイムゾーン付き）・取得元URL |
+
+両ファイルの取得と記録の作成が成功してから保存先を更新します。取得失敗時は既存ファイルと記録を維持し、終了コード1を返します。
+取得ファイルはローカルの調査資料として扱い、Git管理・VS Codeの検索・ファイル監視から除外します。
+
+取得ファイルだけで判断せず、実際のDOM・適用スタイルでも確認します。
+調査結果は取得日時・参照URL・依存セレクター・確認した挙動とともに `docs/` へ記録します。
+
 ## カスタマイズの追加手順
 
 1. 種類に応じて `src/user-script/` または `src/user-css/` 配下に、記事名のディレクトリを作る

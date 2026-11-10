@@ -5,3 +5,6 @@
 .DS_Store
 Thumbs.db
 
+# Downloaded Scrapbox reference assets
+/references/scrapbox/
+
