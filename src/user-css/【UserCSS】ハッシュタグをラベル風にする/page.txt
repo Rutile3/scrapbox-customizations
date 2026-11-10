@@ -1,4 +1,4 @@
-【Scrapbox】ハッシュタグをラベル風にする【UserCSS】
+【UserCSS】ハッシュタグをラベル風にする
 [*** 概要]
 [settings - Porter for Scrapbox オンラインヘルプ https://scrapbox.io/porterapp/settings#5accda4865ab960000b49971]のコードを使用。
 
