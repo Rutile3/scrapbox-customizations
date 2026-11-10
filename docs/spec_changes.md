@@ -2,6 +2,12 @@
 
 ## 2026-11-10
 
+### 【Scrapbox】PopupMenuに「Twitterにシェア」を追加する
+
+- 記事名を基準にした管理への移行の続きとして、`src/user-script/twitter-share-popup-menu/` を `src/user-script/【Scrapbox】PopupMenuに「Twitterにシェア」を追加する/` へ移動。JavaScriptの内容は変更なし
+- 記事本文の `page.txt` と記事URLの `.url` を追加し、記事READMEに本文内コードと実装本体の同期方針を記載
+- ルートREADMEのリンクと記事READMEの見出しを記事名へ更新し、完了した移行対象をTODOの一覧から削除。過去の変更記録は維持
+
 ### 【Scrapbox】page-edit-menuに「Twitterにシェア」を追加
 
 - 記事名を基準にした管理への移行の続きとして、`src/user-script/twitter-share-page-menu/` を `src/user-script/【Scrapbox】page-edit-menuに「Twitterにシェア」を追加/` へ移動。JavaScriptの内容は変更なし
