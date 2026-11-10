@@ -1,4 +1,4 @@
-# 【Scrapbox】右上のページメニューにスクロールバーが表示されるのを防ぐ【UserCSS】
+# 【UserCSS】ページメニューのスクロールバーを非表示にする
 
 Scrapbox（Cosense）右上のページメニューに表示されるスクロールバーを隠す
 UserCSSです。
@@ -21,7 +21,7 @@ UserCSSです。
 
 ## 関連記事
 
-- [【Scrapbox】右上のページメニューにスクロールバーが表示されるのを防ぐ【UserCSS】](https://scrapbox.io/Rutile3-Tech/【Scrapbox】右上のページメニューにスクロールバーが表示されるのを防ぐ【UserCSS】)
+- [【UserCSS】ページメニューのスクロールバーを非表示にする](https://scrapbox.io/Rutile3-Tech/【UserCSS】ページメニューのスクロールバーを非表示にする)
 
 ## 前提
 
