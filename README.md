@@ -33,7 +33,7 @@ GitHub上の各 `script.js` と `style.css` を実装の正本とし、Scrapbox�
 ## 管理方針
 
 - UserScriptは `src/user-script/`、UserCSSは `src/user-css/` 配下に配置する
-- Scrapboxの記事を単位として、記事名のディレクトリで管理する。既存の機能名ディレクトリは順次移行する
+- Scrapboxの記事を単位として、記事名のディレクトリで管理する
 - 記事名にファイル名として使用できない文字が含まれる場合は置換する（例：`/` → `／`）。正確な記事名と記事URLは各READMEに記載する
 - 実装本体は各ディレクトリの `script.js` または `style.css` とする
 - Scrapboxへは実装本体をそのままコピーする

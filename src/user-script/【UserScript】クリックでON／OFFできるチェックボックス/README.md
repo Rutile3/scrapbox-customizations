@@ -25,4 +25,3 @@ Scrapbox の行頭にあるチェック記号をクリックし、未完了・�
 
 Scrapbox の DOM、疑似 keydown イベント、および Scrapbox 上で利用可能な jQuery に
 依存します。Scrapbox 側の仕様変更時には動作確認が必要です。
-
