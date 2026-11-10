@@ -1,4 +1,4 @@
-# hide-page-menu-scrollbar
+# 【Scrapbox】右上のページメニューにスクロールバーが表示されるのを防ぐ【UserCSS】
 
 Scrapbox（Cosense）右上のページメニューに表示されるスクロールバーを隠す
 UserCSSです。
@@ -10,6 +10,8 @@ UserCSSです。
 3. ウィンドウ幅を狭めた場合や、ページメニューを追加した場合の表示を確認する
 
 実装の正本は `style.css` です。
+[`page.txt`](page.txt) はScrapbox形式の記事本文で、CSSを変更した場合は
+本文内の `code:style.css` も同期します。
 
 ## 実装上の注意
 

@@ -14,7 +14,6 @@ Scrapboxの記事名のフォルダーへ順次移行します。今回の
 ### 残りの移行対象
 
 - [ ] UserCSS：`hashtag-label`
-- [ ] UserCSS：`hide-page-menu-scrollbar`
 - [ ] UserCSS：`keyboard-key`
 - [ ] UserCSS：`media-border-shadow`
 
