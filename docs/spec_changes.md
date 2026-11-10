@@ -2,6 +2,12 @@
 
 ## 2026-11-10
 
+### keyboard-keyの廃止と記事名への移行完了
+
+- 廃止済みのUserCSS `keyboard-key` の `style.css` とREADMEを削除し、ルートREADMEの管理対象一覧から除外
+- 最後の移行予定だった `keyboard-key` を廃止したことで、現存する全UserScript・UserCSSの記事名フォルダーへの移行が完了。TODOから一連の移行作業の節を削除し、機能ごとの未完了課題は維持
+- 過去の追加仕様・変更記録は履歴として維持
+
 ### 【Scrapbox】画像と動画に枠と影をつける【UserCSS】
 
 - 記事名を基準にした管理への移行の続きとして、`src/user-css/media-border-shadow/` を `src/user-css/【Scrapbox】画像と動画に枠と影をつける【UserCSS】/` へ移動。CSSの内容は変更なし
