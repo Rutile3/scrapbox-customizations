@@ -1,4 +1,4 @@
-# insert-checkbox
+# 【UserScript】Ctrl+Bでチェックボックスを挿入する
 
 Cosense（旧Scrapbox）の本文編集中にCtrl+Bを押すと、カーソル位置へ未チェック記号
 `⬜` を挿入するUserScriptです。
@@ -16,6 +16,8 @@ import '/api/code/Rutile3-Tech/【UserScript】Ctrl+Bでチェックボックス
 ```
 
 実装の正本は [`script.js`](script.js) です。
+[`page.txt`](page.txt) はScrapbox形式の記事本文で、コードを変更した場合は
+本文内の `code:script.js` も同期します。
 
 ## 動作
 

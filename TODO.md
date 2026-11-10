@@ -13,7 +13,6 @@ Scrapboxの記事名のフォルダーへ順次移行します。今回の
 
 ### 残りの移行対象
 
-- [ ] UserScript：`insert-checkbox`
 - [ ] UserScript：`twitter-share-page-menu`
 - [ ] UserScript：`twitter-share-popup-menu`
 - [ ] UserCSS：`hashtag-label`
@@ -32,7 +31,7 @@ Scrapboxの記事名のフォルダーへ順次移行します。今回の
 以下の既存TODOは機能ごとの改善課題です。記事名への移行とは分けて扱い、
 フォルダー名変更のついでに実装を変更しないようにします。
 
-## insert-checkbox
+## 【UserScript】Ctrl+Bでチェックボックスを挿入する
 
 ### 安全性と責務の整理
 
