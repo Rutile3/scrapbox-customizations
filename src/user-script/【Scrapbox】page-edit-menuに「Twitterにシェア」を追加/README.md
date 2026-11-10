@@ -1,4 +1,4 @@
-# twitter-share-page-menu
+# 【Scrapbox】page-edit-menuに「Twitterにシェア」を追加
 
 Scrapbox（Cosense）のページメニューへ「Twitterにシェア」を追加し、現在のページタイトルと
 URLをTwitterの投稿画面へ渡すUserScriptです。
@@ -10,6 +10,8 @@ URLをTwitterの投稿画面へ渡すUserScriptです。
 3. ページメニューの「Twitterにシェア」を選択する
 
 実装の正本は `script.js` です。
+[`page.txt`](page.txt) はScrapbox形式の記事本文で、コードを変更した場合は
+本文内の `code:script.js` も同期します。
 
 ## 動作
 

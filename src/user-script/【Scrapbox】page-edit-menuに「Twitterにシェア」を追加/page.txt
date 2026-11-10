@@ -1,0 +1,54 @@
+【Scrapbox】page-edit-menuに「Twitterにシェア」を追加
+[*** 概要]
+[Scrapbox]でページを作成した際に[Twitter]で宣伝することがあるのですが、「いっそのことツイートのUserScriptを作ればワンクリックでツイートできるのでは？」と思ったので作ってみました。
+
+
+[*** 完成したもの]
+[https://gyazo.com/db317679f75e75ba5af4792d3327d64b]
+
+
+[*** ソースコード]
+code:script.js
+ // page-edit-menuに「Twitterにシェア」を追加します。
+ scrapbox.PageMenu.addItem({
+   title: 'Twitterにシェア',
+   onClick: () => {
+     const urlParams = new URLSearchParams({
+       // TwitterがURL末尾の「.」をURLの一部として認識しないため、
+       // パーセントエンコードされた「%2E」に置き換えます。
+       url: location.href.replace(/\.$/, '%2E'),
+
+       // ドメイン風文字列や拡張子が自動リンクされないように、
+       // タイトル内の「.」の直後へゼロ幅スペースを挿入します。
+       text: document.title.replaceAll('.', '.\u200B'),
+     });
+
+     const shareUrl = `https://twitter.com/intent/tweet?${urlParams}`;
+     window.open(shareUrl, '_blank', 'width=600,height=300');
+   },
+ });
+
+
+[** ソースコードの簡単な説明]
+`scrapbox.PageMenu.addItem({`
+ [Scrapbox]の[page-edit-menu]に項目を追加する処理
+ `title`： メニュー上の項目名
+ `onClick`：追加した項目をクリックしたときの処理
+
+`new URLSearchParams({`
+ [Twitter Intent]に渡すURLパラメーターを作成する処理
+ `url`：ツイートに挿入するページのURL
+ `text`：ツイート本文に挿入するページタイトル
+
+各値に含まれる日本語や記号は、URLパラメーターとして使用できる形式へ自動的に変換される
+
+`location.href.replace(/\.$/, '%2E')`
+ ページのURLの末尾が「`.`」の場合、その「`.`」を 「`%2E`」 に置換する処理
+ [Twitter]では、URL末尾の「`.`」がURLの一部として認識されないので置換している
+
+`document.title.replaceAll('.', '.​')`
+ ページタイトル内の「`.`」を、[ゼロ幅スペース]を含む「`.​`」に置換する処理
+ プロジェクト名に `Rutile3.tech` のようなドメイン風の文字列が含まれている場合や、ページ名に `.xlsx` のような拡張子が含まれている場合に、ドメインとして認識されるのを回避している
+
+
+#Scrapbox #UserScript #JavaScript #Twitter

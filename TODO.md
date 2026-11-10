@@ -13,7 +13,6 @@ Scrapboxの記事名のフォルダーへ順次移行します。今回の
 
 ### 残りの移行対象
 
-- [ ] UserScript：`twitter-share-page-menu`
 - [ ] UserScript：`twitter-share-popup-menu`
 - [ ] UserCSS：`hashtag-label`
 - [ ] UserCSS：`hide-page-menu-scrollbar`
