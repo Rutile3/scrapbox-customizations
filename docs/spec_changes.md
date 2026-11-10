@@ -1,5 +1,15 @@
 # 仕様変更
 
+## 2026-11-10
+
+### 【UserScript】クリックでON/OFFできるチェックボックス
+
+- `src/user-script/toggle-checkbox/` を記事名に合わせて `src/user-script/【UserScript】クリックでON／OFFできるチェックボックス/` へ移動。JavaScriptの内容は変更なし
+- Windowsのファイル名制約に合わせ、ディレクトリ名では記事名の `/` を `／` に置換
+- 記事本文の `page.txt` と記事URLの `.url` を追加し、実装本体と本文内コードの同期方針をREADMEへ記載
+- ルートREADMEとTODOを新しい記事名・配置に合わせて更新。記事READMEにチェック記号の切替順序と関連記事URLを記載し、対応するTODOを削除
+- 記事名を基準に管理する方針と追加手順をルートREADMEへ記載。ほかの既存ディレクトリは順次移行
+
 ## 2026-09-24
 
 ### media-border-shadow

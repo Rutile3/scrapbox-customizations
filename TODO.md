@@ -4,6 +4,34 @@
 変更内容に応じて `docs/spec_additions.md`、`docs/spec_changes.md`、または
 `docs/bug_fixes.md` へ記録します。
 
+## このブランチでの一連の改修：Scrapbox記事名を基準にした管理への移行
+
+このブランチでは、すべてのUserScript・UserCSSを対象に、機能名のフォルダーから
+Scrapboxの記事名のフォルダーへ順次移行します。今回の
+「【UserScript】クリックでON/OFFできるチェックボックス」（旧 `toggle-checkbox`）の
+移行を最初の変更とし、以下を同じ改修の続きとして進めます。
+
+### 残りの移行対象
+
+- [ ] UserScript：`insert-checkbox`
+- [ ] UserScript：`twitter-share-page-menu`
+- [ ] UserScript：`twitter-share-popup-menu`
+- [ ] UserCSS：`hashtag-label`
+- [ ] UserCSS：`hide-page-menu-scrollbar`
+- [ ] UserCSS：`keyboard-key`
+- [ ] UserCSS：`media-border-shadow`
+
+### 各対象で行うこと
+
+- 対応する記事名・記事URLを確認し、記事名に合わせてフォルダー名を変更する。使用できない文字はルートREADMEの管理方針に従って置換する
+- 記事内のコードブロック名と実装ファイル名を対応させ、記事READMEに記事名・URL・使い方を記載する
+- 記事本文の `page.txt` と記事URLの `.url` を整備し、本文内コードと実装本体を一致させる
+- ルートREADMEとTODOの名称・参照先を更新し、日本語の変更記録を残す。過去の変更記録の旧名称・旧パスは維持する
+- 移行に伴うコードの意図しない変更、リンク切れ、改行崩れ・タブ混入・インデントずれ・不要なエスケープ文字がないことを確認する
+
+以下の既存TODOは機能ごとの改善課題です。記事名への移行とは分けて扱い、
+フォルダー名変更のついでに実装を変更しないようにします。
+
 ## insert-checkbox
 
 ### 安全性と責務の整理
@@ -44,7 +72,7 @@ Undo 履歴を維持できる現在の実装を継続します。
 
 - [ ] 画像への適用範囲を拡張したCSSをScrapboxへ反映し、アップロード画像、Gyazo画像、その他の配信元の `img.image`、および既存のGyazo動画の表示を確認する
 
-## toggle-checkbox
+## 【UserScript】クリックでON/OFFできるチェックボックス
 
 Scrapbox の内部実装に依存しているため、互換性を優先し、小さな変更単位で
 リファクタリングを進めます。
@@ -73,11 +101,6 @@ Scrapbox 上でも確認します。
 
 Scrapbox の初期化タイミングと内部実装への依存を調査し、結果を記録してから
 実装を変更するか判断します。
-
-### 文書整備
-
-- [ ] 対応するチェック記号 `⬜`、`✅` と切替順序を `src/user-script/toggle-checkbox/README.md` に記載する
-- [ ] Scrapbox の解説記事の URL が確定したら `src/user-script/toggle-checkbox/README.md` にリンクを追加する
 
 ## 運用方法
 
