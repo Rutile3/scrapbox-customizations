@@ -1,0 +1,64 @@
+【Scrapbox】画像と動画に枠と影をつける【UserCSS】
+[*** 概要]
+記事を作成していて、白背景の画像だとページ背景との境界が分かりづらいと感じた。
+そこで、Scrapbox上に表示される画像と[Gyazo]の動画に、枠と影をつける[UserCSS]を作成した。
+
+
+[*** UserCSS]
+code:style.css
+ .page img.image,
+ .page video.gyazo.image,
+ .page .gyazo.oembed > iframe {
+   box-sizing: border-box;
+   border: 1px solid rgb(0, 0, 0);
+   box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
+ }
+
+[** 解説]
+ 各セレクタでは、次の要素を対象としている。
+  table:セレクタ
+   セレクタ	対象
+   .page img.image	imageクラスを持つ画像
+   .page video.gyazo.image	video要素として表示されるGyazo Video
+   .page .gyazo.oembed > iframe	iframe要素として埋め込まれるGyazo Video
+ `.page img.image`では、Scrapboxにアップロードした画像やGyazo画像など、配信元や`alt`属性を問わず、ページ本文内で`image`クラスを持つ画像を対象にしている。
+　`.page`や`.gyazo.oembed`では、`main`や`div`などのHTMLタグ名をあえて指定していない。
+　 HTMLタグ名への依存を減らし、Scrapbox側でHTML要素が変更された場合の影響を受けにくくするため。
+　 Gyazoの埋め込み動画には、動画の形状などによって`.square`や`.landscape`といったクラスが付与される場合があるが、これらもあえて指定していない。
+  `.gyazo.oembed > iframe`とすることで、動画の形状クラスに依存せず対象にできる。
+　`box-sizing: border-box;`を指定し、境界線を要素のサイズに含めている。
+　 これにより、`border`を追加したことで画像や動画の外寸が大きくなることを防いでいる。
+
+
+[*** 使用例]
+
+Scrapboxにアップロードした画像の場合
+ Scrapboxへ画像をアップロードして表示すると確認できる
+
+[https://gyazo.com/11c2867f8043c04f46543bf3562a65dc]
+Gyazo画像の場合（パターン１）
+ [Gyazo]の画像を表示すると確認できる
+
+[https://gyazo.com/11c2867f8043c04f46543bf3562a65dc https://scrapbox.io/Rutile3-Tech/%E3%80%90VS_Code%E3%80%91%E5%90%8C%E3%81%98%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9%E3%82%92%E8%A4%87%E6%95%B0%E3%81%AE%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6%E3%81%A7%E9%96%8B%E3%81%8F]
+Gyazo画像の場合（パターン２）
+ リンク付きの[Gyazo]の画像を表示すると確認できる
+
+[https://gyazo.com/8e8220af721ea86f9ab3e4af653f5dcc]
+動画の場合（パターン１）
+ [Gyazo Video]で録画した、音声なしの動画を表示すると確認できる
+
+[https://gyazo.com/fdae01cffe4c513e134cd79e06fa1c70]
+動画の場合（パターン２）
+ [Gyazo Video]で録画した、音声あり・縦長の動画を表示すると確認できる
+
+[https://gyazo.com/bce7832d317098fd99cc2d6c16773749]
+動画の場合（パターン３）
+ [Gyazo Video]で録画した、音声あり・横長の動画を表示すると確認できる
+
+
+[*** 参考]
+ [https://scrapbox.io/help-jp/UserCSS UserCSS - Scrapboxヘルプ]
+ [https://scrapbox.io/help-jp/アクセシビリティ改善のためHTMLの要素を変更します アクセシビリティ改善のためHTMLの要素を変更します - Scrapboxヘルプ]
+
+
+#Scrapbox #UserCSS #CSS
