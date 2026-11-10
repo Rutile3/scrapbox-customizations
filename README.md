@@ -21,7 +21,7 @@ GitHub上の各 `script.js` と `style.css` を実装の正本とし、Scrapbox�
 | --- | --- | --- |
 | [【UserCSS】ハッシュタグをラベル風にする](src/user-css/【UserCSS】ハッシュタグをラベル風にする/) | ハッシュタグをラベル風に表示する | 管理中 |
 | [【UserCSS】ページメニューのスクロールバーを非表示にする](src/user-css/【UserCSS】ページメニューのスクロールバーを非表示にする/) | 右上のページメニューに表示されるスクロールバーを隠す | 管理中 |
-| [【Scrapbox】画像と動画に枠と影をつける【UserCSS】](src/user-css/【Scrapbox】画像と動画に枠と影をつける【UserCSS】/) | Scrapboxアップロード画像などの画像とGyazo動画に境界線と影を付ける | 管理中 |
+| [【UserCSS】画像と動画に枠と影をつける](src/user-css/【UserCSS】画像と動画に枠と影をつける/) | Scrapboxアップロード画像などの画像とGyazo動画に境界線と影を付ける | 管理中 |
 
 ## 文書
 
