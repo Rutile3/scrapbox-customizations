@@ -1,4 +1,4 @@
-# 【Scrapbox】画像と動画に枠と影をつける【UserCSS】
+# 【UserCSS】画像と動画に枠と影をつける
 
 Scrapbox（Cosense）のページ本文に表示される画像とGyazo動画へ、境界線と影を付ける
 UserCSSです。白い背景の画像でも、ページ背景との境界を判別しやすくします。
@@ -24,7 +24,7 @@ UserCSSです。白い背景の画像でも、ページ背景との境界を判�
 
 ## 関連記事
 
-- [【Scrapbox】画像と動画に枠と影をつける【UserCSS】](https://scrapbox.io/Rutile3-Tech/%E3%80%90Scrapbox%E3%80%91%E7%94%BB%E5%83%8F%E3%81%A8%E5%8B%95%E7%94%BB%E3%81%AB%E6%9E%A0%E3%81%A8%E5%BD%B1%E3%82%92%E3%81%A4%E3%81%91%E3%82%8B%E3%80%90UserCSS%E3%80%91)
+- [【UserCSS】画像と動画に枠と影をつける](https://scrapbox.io/Rutile3-Tech/%E3%80%90UserCSS%E3%80%91%E7%94%BB%E5%83%8F%E3%81%A8%E5%8B%95%E7%94%BB%E3%81%AB%E6%9E%A0%E3%81%A8%E5%BD%B1%E3%82%92%E3%81%A4%E3%81%91%E3%82%8B)
 
 ## 前提
 

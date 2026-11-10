@@ -1,4 +1,4 @@
-【Scrapbox】PopupMenuに「Twitterにシェア」を追加する
+【UserScript】PopupMenuに「Twitterにシェア」を追加する
 [*** 概要]
 [Scrapbox]で日記を書いているときに、「選択した文字列をそのままツイートできたら便利そう」と思ったので作ってみました。
 [PopupMenu]に「Twitterにシェア」ボタンを追加し、選択した文字列が入力された状態で[Twitter]の投稿画面を開きます。

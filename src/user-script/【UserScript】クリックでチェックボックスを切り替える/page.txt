@@ -1,4 +1,4 @@
-【UserScript】クリックでON/OFFできるチェックボックス
+【UserScript】クリックでチェックボックスを切り替える
 下記のリンクを参考に作成
 　[/customize/クリックでON/OFFできるチェックボックス]
 

@@ -10,18 +10,18 @@ GitHub上の各 `script.js` と `style.css` を実装の正本とし、Scrapbox�
 
 | ディレクトリ | 概要 | 状態 |
 | --- | --- | --- |
-| [【UserScript】クリックでON/OFFできるチェックボックス](src/user-script/【UserScript】クリックでON／OFFできるチェックボックス/) | 行頭のチェック記号をクリックして切り替える | 管理中 |
+| [【UserScript】クリックでチェックボックスを切り替える](src/user-script/【UserScript】クリックでチェックボックスを切り替える/) | 行頭のチェック記号をクリックして切り替える | 管理中 |
 | [【UserScript】Ctrl+Bでチェックボックスを挿入する](src/user-script/【UserScript】Ctrl+Bでチェックボックスを挿入する/) | Ctrl+Bで未チェック記号を挿入する | 管理中 |
-| [【Scrapbox】page-edit-menuに「Twitterにシェア」を追加](src/user-script/【Scrapbox】page-edit-menuに「Twitterにシェア」を追加/) | ページメニューからTwitterへページを共有する | 管理中 |
-| [【Scrapbox】PopupMenuに「Twitterにシェア」を追加する](src/user-script/【Scrapbox】PopupMenuに「Twitterにシェア」を追加する/) | PopupMenuから選択文字列をTwitterへ共有する | 管理中 |
+| [【UserScript】ページメニューに「Twitterにシェア」を追加する](src/user-script/【UserScript】ページメニューに「Twitterにシェア」を追加する/) | ページメニューからTwitterへページを共有する | 管理中 |
+| [【UserScript】PopupMenuに「Twitterにシェア」を追加する](src/user-script/【UserScript】PopupMenuに「Twitterにシェア」を追加する/) | PopupMenuから選択文字列をTwitterへ共有する | 管理中 |
 
 ## UserCSS
 
 | ディレクトリ | 概要 | 状態 |
 | --- | --- | --- |
-| [【Scrapbox】ハッシュタグをラベル風にする【UserCSS】](src/user-css/【Scrapbox】ハッシュタグをラベル風にする【UserCSS】/) | ハッシュタグをラベル風に表示する | 管理中 |
-| [【Scrapbox】右上のページメニューにスクロールバーが表示されるのを防ぐ【UserCSS】](src/user-css/【Scrapbox】右上のページメニューにスクロールバーが表示されるのを防ぐ【UserCSS】/) | 右上のページメニューに表示されるスクロールバーを隠す | 管理中 |
-| [【Scrapbox】画像と動画に枠と影をつける【UserCSS】](src/user-css/【Scrapbox】画像と動画に枠と影をつける【UserCSS】/) | Scrapboxアップロード画像などの画像とGyazo動画に境界線と影を付ける | 管理中 |
+| [【UserCSS】ハッシュタグをラベル風にする](src/user-css/【UserCSS】ハッシュタグをラベル風にする/) | ハッシュタグをラベル風に表示する | 管理中 |
+| [【UserCSS】ページメニューのスクロールバーを非表示にする](src/user-css/【UserCSS】ページメニューのスクロールバーを非表示にする/) | 右上のページメニューに表示されるスクロールバーを隠す | 管理中 |
+| [【UserCSS】画像と動画に枠と影をつける](src/user-css/【UserCSS】画像と動画に枠と影をつける/) | Scrapboxアップロード画像などの画像とGyazo動画に境界線と影を付ける | 管理中 |
 
 ## 文書
 
