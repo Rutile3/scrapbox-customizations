@@ -4,7 +4,7 @@
 変更内容に応じて `docs/spec_additions.md`、`docs/spec_changes.md`、または
 `docs/bug_fixes.md` へ記録します。
 
-## insert-checkbox
+## 【UserScript】Ctrl+Bでチェックボックスを挿入する
 
 ### 安全性と責務の整理
 
@@ -21,7 +21,7 @@ DOM、フォーカス、キーボードイベントに関係する変更は、Co
 `document.execCommand()` は非推奨ですが、代替手段の検証が完了するまでは、
 Undo 履歴を維持できる現在の実装を継続します。
 
-## hashtag-label
+## 【Scrapbox】ハッシュタグをラベル風にする【UserCSS】
 
 ### CSS指定の整理
 
@@ -38,13 +38,13 @@ Undo 履歴を維持できる現在の実装を継続します。
 - [ ] 通常リンクと未作成ページリンクの文字色について、実際の背景色とのコントラストを確認し、必要なら色を調整する
 - [ ] ホバー時の `scale(1.1)` で隣接するタグや文字へ重なるか確認し、必要なら前面表示を追加する
 
-## media-border-shadow
+## 【Scrapbox】画像と動画に枠と影をつける【UserCSS】
 
 ### 表示確認
 
 - [ ] 画像への適用範囲を拡張したCSSをScrapboxへ反映し、アップロード画像、Gyazo画像、その他の配信元の `img.image`、および既存のGyazo動画の表示を確認する
 
-## toggle-checkbox
+## 【UserScript】クリックでON/OFFできるチェックボックス
 
 Scrapbox の内部実装に依存しているため、互換性を優先し、小さな変更単位で
 リファクタリングを進めます。
@@ -73,11 +73,6 @@ Scrapbox 上でも確認します。
 
 Scrapbox の初期化タイミングと内部実装への依存を調査し、結果を記録してから
 実装を変更するか判断します。
-
-### 文書整備
-
-- [ ] 対応するチェック記号 `⬜`、`✅` と切替順序を `src/user-script/toggle-checkbox/README.md` に記載する
-- [ ] Scrapbox の解説記事の URL が確定したら `src/user-script/toggle-checkbox/README.md` にリンクを追加する
 
 ## 運用方法
 

@@ -1,5 +1,63 @@
 # 仕様変更
 
+## 2026-11-10
+
+### 記事名への移行後の文書整理
+
+- 全対象の移行完了に合わせ、ルートREADMEから移行途中の記述を削除
+- チェックボックス切替の記事READMEの末尾にある余分な空行を削除
+- チェックボックス挿入の記事URLから行IDを外し、ほかの記事と同様に記事全体へのリンクへ統一
+
+### keyboard-keyの廃止と記事名への移行完了
+
+- 廃止済みのUserCSS `keyboard-key` の `style.css` とREADMEを削除し、ルートREADMEの管理対象一覧から除外
+- 最後の移行予定だった `keyboard-key` を廃止したことで、現存する全UserScript・UserCSSの記事名フォルダーへの移行が完了。TODOから一連の移行作業の節を削除し、機能ごとの未完了課題は維持
+- 過去の追加仕様・変更記録は履歴として維持
+
+### 【Scrapbox】画像と動画に枠と影をつける【UserCSS】
+
+- 記事名を基準にした管理への移行の続きとして、`src/user-css/media-border-shadow/` を `src/user-css/【Scrapbox】画像と動画に枠と影をつける【UserCSS】/` へ移動。CSSの内容は変更なし
+- 記事本文の `page.txt` と記事URLの `.url` を追加し、記事READMEに本文内CSSと実装本体の同期方針、および表の列区切りタブを維持する方針を記載
+- ルートREADMEのリンクと記事README・TODOの見出しを記事名へ更新し、完了した移行対象をTODOの一覧から削除。実環境での表示確認TODOと過去の変更記録は維持
+
+### 【Scrapbox】ハッシュタグをラベル風にする【UserCSS】
+
+- 記事名を基準にした管理への移行の続きとして、`src/user-css/hashtag-label/` を `src/user-css/【Scrapbox】ハッシュタグをラベル風にする【UserCSS】/` へ移動。CSSの内容は変更なし
+- 記事本文の `page.txt` と記事URLの `.url` を追加し、記事READMEに本文内CSSと実装本体の同期方針を記載
+- ルートREADMEのリンクと記事README・TODOの見出しを記事名へ更新し、完了した移行対象をTODOの一覧から削除。既存の機能改善TODOと過去の変更記録は維持
+
+### 【Scrapbox】右上のページメニューにスクロールバーが表示されるのを防ぐ【UserCSS】
+
+- 記事名を基準にした管理への移行の続きとして、`src/user-css/hide-page-menu-scrollbar/` を `src/user-css/【Scrapbox】右上のページメニューにスクロールバーが表示されるのを防ぐ【UserCSS】/` へ移動。CSSの内容は変更なし
+- 記事本文の `page.txt` と記事URLの `.url` を追加し、記事READMEに本文内CSSと実装本体の同期方針を記載
+- ルートREADMEのリンクと記事READMEの見出しを記事名へ更新し、完了した移行対象をTODOの一覧から削除。過去の変更記録は維持
+
+### 【Scrapbox】PopupMenuに「Twitterにシェア」を追加する
+
+- 記事名を基準にした管理への移行の続きとして、`src/user-script/twitter-share-popup-menu/` を `src/user-script/【Scrapbox】PopupMenuに「Twitterにシェア」を追加する/` へ移動。JavaScriptの内容は変更なし
+- 記事本文の `page.txt` と記事URLの `.url` を追加し、記事READMEに本文内コードと実装本体の同期方針を記載
+- ルートREADMEのリンクと記事READMEの見出しを記事名へ更新し、完了した移行対象をTODOの一覧から削除。過去の変更記録は維持
+
+### 【Scrapbox】page-edit-menuに「Twitterにシェア」を追加
+
+- 記事名を基準にした管理への移行の続きとして、`src/user-script/twitter-share-page-menu/` を `src/user-script/【Scrapbox】page-edit-menuに「Twitterにシェア」を追加/` へ移動。JavaScriptの内容は変更なし
+- 記事本文の `page.txt` と記事URLの `.url` を追加し、記事READMEに本文内コードと実装本体の同期方針を記載
+- ルートREADMEのリンクと記事READMEの見出しを記事名へ更新し、完了した移行対象をTODOの一覧から削除。過去の変更記録は維持
+
+### 【UserScript】Ctrl+Bでチェックボックスを挿入する
+
+- 記事名を基準にした管理への移行の続きとして、`src/user-script/insert-checkbox/` を `src/user-script/【UserScript】Ctrl+Bでチェックボックスを挿入する/` へ移動。JavaScriptの内容は変更なし
+- 記事本文の `page.txt` と記事URLの `.url` を追加し、記事READMEに本文内コードと実装本体の同期方針を記載
+- ルートREADMEのリンクと記事README・TODOの見出しを記事名へ更新し、完了した移行対象をTODOの一覧から削除。既存の機能改善TODOと過去の変更記録は維持
+
+### 【UserScript】クリックでON/OFFできるチェックボックス
+
+- `src/user-script/toggle-checkbox/` を記事名に合わせて `src/user-script/【UserScript】クリックでON／OFFできるチェックボックス/` へ移動。JavaScriptの内容は変更なし
+- Windowsのファイル名制約に合わせ、ディレクトリ名では記事名の `/` を `／` に置換
+- 記事本文の `page.txt` と記事URLの `.url` を追加し、実装本体と本文内コードの同期方針をREADMEへ記載
+- ルートREADMEとTODOを新しい記事名・配置に合わせて更新。記事READMEにチェック記号の切替順序と関連記事URLを記載し、対応するTODOを削除
+- 記事名を基準に管理する方針と追加手順をルートREADMEへ記載。ほかの既存ディレクトリは順次移行
+
 ## 2026-09-24
 
 ### media-border-shadow

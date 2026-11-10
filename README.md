@@ -10,19 +10,18 @@ GitHub上の各 `script.js` と `style.css` を実装の正本とし、Scrapbox�
 
 | ディレクトリ | 概要 | 状態 |
 | --- | --- | --- |
-| [`toggle-checkbox/`](src/user-script/toggle-checkbox/) | 行頭のチェック記号をクリックして切り替える | 管理中 |
-| [`insert-checkbox/`](src/user-script/insert-checkbox/) | Ctrl+Bで未チェック記号を挿入する | 管理中 |
-| [`twitter-share-page-menu/`](src/user-script/twitter-share-page-menu/) | ページメニューからTwitterへページを共有する | 管理中 |
-| [`twitter-share-popup-menu/`](src/user-script/twitter-share-popup-menu/) | PopupMenuから選択文字列をTwitterへ共有する | 管理中 |
+| [【UserScript】クリックでON/OFFできるチェックボックス](src/user-script/【UserScript】クリックでON／OFFできるチェックボックス/) | 行頭のチェック記号をクリックして切り替える | 管理中 |
+| [【UserScript】Ctrl+Bでチェックボックスを挿入する](src/user-script/【UserScript】Ctrl+Bでチェックボックスを挿入する/) | Ctrl+Bで未チェック記号を挿入する | 管理中 |
+| [【Scrapbox】page-edit-menuに「Twitterにシェア」を追加](src/user-script/【Scrapbox】page-edit-menuに「Twitterにシェア」を追加/) | ページメニューからTwitterへページを共有する | 管理中 |
+| [【Scrapbox】PopupMenuに「Twitterにシェア」を追加する](src/user-script/【Scrapbox】PopupMenuに「Twitterにシェア」を追加する/) | PopupMenuから選択文字列をTwitterへ共有する | 管理中 |
 
 ## UserCSS
 
 | ディレクトリ | 概要 | 状態 |
 | --- | --- | --- |
-| [`hashtag-label/`](src/user-css/hashtag-label/) | ハッシュタグをラベル風に表示する | 管理中 |
-| [`hide-page-menu-scrollbar/`](src/user-css/hide-page-menu-scrollbar/) | 右上のページメニューに表示されるスクロールバーを隠す | 管理中 |
-| [`keyboard-key/`](src/user-css/keyboard-key/) | &#124; 装飾をキーボードのキー風に表示する | 管理中 |
-| [`media-border-shadow/`](src/user-css/media-border-shadow/) | Scrapboxアップロード画像などの画像とGyazo動画に境界線と影を付ける | 管理中 |
+| [【Scrapbox】ハッシュタグをラベル風にする【UserCSS】](src/user-css/【Scrapbox】ハッシュタグをラベル風にする【UserCSS】/) | ハッシュタグをラベル風に表示する | 管理中 |
+| [【Scrapbox】右上のページメニューにスクロールバーが表示されるのを防ぐ【UserCSS】](src/user-css/【Scrapbox】右上のページメニューにスクロールバーが表示されるのを防ぐ【UserCSS】/) | 右上のページメニューに表示されるスクロールバーを隠す | 管理中 |
+| [【Scrapbox】画像と動画に枠と影をつける【UserCSS】](src/user-css/【Scrapbox】画像と動画に枠と影をつける【UserCSS】/) | Scrapboxアップロード画像などの画像とGyazo動画に境界線と影を付ける | 管理中 |
 
 ## 文書
 
@@ -34,11 +33,13 @@ GitHub上の各 `script.js` と `style.css` を実装の正本とし、Scrapbox�
 ## 管理方針
 
 - UserScriptは `src/user-script/`、UserCSSは `src/user-css/` 配下に配置する
-- 1つのカスタマイズを1ディレクトリで管理する
+- Scrapboxの記事を単位として、記事名のディレクトリで管理する
+- 記事名にファイル名として使用できない文字が含まれる場合は置換する（例：`/` → `／`）。正確な記事名と記事URLは各READMEに記載する
 - 実装本体は各ディレクトリの `script.js` または `style.css` とする
 - Scrapboxへは実装本体をそのままコピーする
 - ビルド工程やTypeScriptは導入せず、単一のJavaScriptまたはCSSファイルを維持する
 - Scrapbox側のコードを変更した場合も、同じコミットで実装本体へ反映する
+- 記事本文を `page.txt` として保存する場合は、実装本体を正本とし、本文内のコードも同じ変更で同期する。Scrapbox形式のインデントは維持する
 
 ## 開発環境
 
@@ -53,7 +54,7 @@ VS Code で共有するフォーマット設定は [`.vscode/settings.json`](.vs
 
 ## カスタマイズの追加手順
 
-1. 種類に応じて `src/user-script/` または `src/user-css/` 配下に、内容を表す kebab-case のディレクトリを作る
-2. `script.js` または `style.css` と簡潔な `README.md` を置く
+1. 種類に応じて `src/user-script/` または `src/user-css/` 配下に、記事名のディレクトリを作る
+2. `script.js` または `style.css` と、記事名・記事URL・使い方を記載した `README.md` を置く
 3. この README の一覧へ追加する
 4. Scrapboxの解説記事と実装本体の内容が一致することを確認する

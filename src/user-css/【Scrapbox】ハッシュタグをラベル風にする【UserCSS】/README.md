@@ -1,4 +1,4 @@
-# hashtag-label
+# 【Scrapbox】ハッシュタグをラベル風にする【UserCSS】
 
 Scrapbox（Cosense）のハッシュタグを、枠線と余白のあるラベル風の表示にする
 UserCSSです。リンク先が存在しないハッシュタグは、赤系の色で表示します。
@@ -10,6 +10,8 @@ UserCSSです。リンク先が存在しないハッシュタグは、赤系の�
 3. ハッシュタグの通常表示、未作成ページへのリンク、ホバー表示を確認する
 
 実装の正本は `style.css` です。
+[`page.txt`](page.txt) はScrapbox形式の記事本文で、CSSを変更した場合は
+本文内の `code:style.css` も同期します。
 
 ## 関連記事
 
