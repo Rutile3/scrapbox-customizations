@@ -1,4 +1,4 @@
-【Scrapbox】page-edit-menuに「Twitterにシェア」を追加
+【UserScript】ページメニューに「Twitterにシェア」を追加する
 [*** 概要]
 [Scrapbox]でページを作成した際に[Twitter]で宣伝することがあるのですが、「いっそのことツイートのUserScriptを作ればワンクリックでツイートできるのでは？」と思ったので作ってみました。
 

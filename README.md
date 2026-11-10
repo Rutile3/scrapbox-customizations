@@ -12,7 +12,7 @@ GitHub上の各 `script.js` と `style.css` を実装の正本とし、Scrapbox�
 | --- | --- | --- |
 | [【UserScript】クリックでチェックボックスを切り替える](src/user-script/【UserScript】クリックでチェックボックスを切り替える/) | 行頭のチェック記号をクリックして切り替える | 管理中 |
 | [【UserScript】Ctrl+Bでチェックボックスを挿入する](src/user-script/【UserScript】Ctrl+Bでチェックボックスを挿入する/) | Ctrl+Bで未チェック記号を挿入する | 管理中 |
-| [【Scrapbox】page-edit-menuに「Twitterにシェア」を追加](src/user-script/【Scrapbox】page-edit-menuに「Twitterにシェア」を追加/) | ページメニューからTwitterへページを共有する | 管理中 |
+| [【UserScript】ページメニューに「Twitterにシェア」を追加する](src/user-script/【UserScript】ページメニューに「Twitterにシェア」を追加する/) | ページメニューからTwitterへページを共有する | 管理中 |
 | [【Scrapbox】PopupMenuに「Twitterにシェア」を追加する](src/user-script/【Scrapbox】PopupMenuに「Twitterにシェア」を追加する/) | PopupMenuから選択文字列をTwitterへ共有する | 管理中 |
 
 ## UserCSS
