@@ -13,5 +13,11 @@
   },
   "files.eol": "\n",
   "files.insertFinalNewline": true,
-  "files.trimTrailingWhitespace": true
+  "files.trimTrailingWhitespace": true,
+  "search.exclude": {
+    "**/references/scrapbox/**": true
+  },
+  "files.watcherExclude": {
+    "**/references/scrapbox/**": true
+  }
 }

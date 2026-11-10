@@ -1,5 +1,16 @@
 # 追加仕様
 
+## 2026-11-10
+
+### Scrapbox標準JS・CSSの取得環境
+
+- 手動取得用の `scripts/fetch-scrapbox-assets.bat` と処理本体のPowerShellスクリプトを追加
+- 標準JS・CSSを `references/scrapbox/` へ保存し、ファイルごとの取得日時・取得元URLを `metadata.json` に記録。両方の取得完了後に更新し、取得失敗時は既存ファイルを維持
+- 保存先をGit管理・VS Codeの検索・ファイル監視から除外
+- READMEへ取得手順、実際のDOM・適用スタイルでの確認、および調査結果を `docs/` へ記録する運用を記載
+
+- 実URLからのバッチ取得に成功。模擬取得で正常更新・CSS取得失敗・空レスポンス時の既存3ファイル保持と一時ファイル削除を確認。Git除外とVS Code設定のJSONを検証
+
 ## 2026-08-27
 
 ### hashtag-label
