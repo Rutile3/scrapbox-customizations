@@ -13,7 +13,6 @@ Scrapboxの記事名のフォルダーへ順次移行します。今回の
 
 ### 残りの移行対象
 
-- [ ] UserCSS：`hashtag-label`
 - [ ] UserCSS：`keyboard-key`
 - [ ] UserCSS：`media-border-shadow`
 
@@ -45,7 +44,7 @@ DOM、フォーカス、キーボードイベントに関係する変更は、Co
 `document.execCommand()` は非推奨ですが、代替手段の検証が完了するまでは、
 Undo 履歴を維持できる現在の実装を継続します。
 
-## hashtag-label
+## 【Scrapbox】ハッシュタグをラベル風にする【UserCSS】
 
 ### CSS指定の整理
 

@@ -1,0 +1,35 @@
+【Scrapbox】ハッシュタグをラベル風にする【UserCSS】
+[*** 概要]
+[settings - Porter for Scrapbox オンラインヘルプ https://scrapbox.io/porterapp/settings#5accda4865ab960000b49971]のコードを使用。
+
+
+[*** UserCSS]
+code:style.css
+ a[type="hashTag"] {
+   display: inline-block;
+   margin: 0 8px 10px 0;
+   padding: 2px 8px;
+   border: 2px solid currentColor;
+   border-radius: 3px;
+   background-color: inherit;
+   color: #4b7ff5;
+   font-size: 0.8em;
+   transform: scale(1);
+   transition: transform 0.3s;
+ }
+
+ a[type="hashTag"].empty-page-link {
+   color: #ed8362;
+ }
+
+ a[type="hashTag"]:hover {
+   transform: scale(1.1);
+ }
+
+
+
+[*** 使用例]
+下を参照
+
+
+#Scrapbox #UserCSS #CSS

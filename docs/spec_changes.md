@@ -2,6 +2,12 @@
 
 ## 2026-11-10
 
+### 【Scrapbox】ハッシュタグをラベル風にする【UserCSS】
+
+- 記事名を基準にした管理への移行の続きとして、`src/user-css/hashtag-label/` を `src/user-css/【Scrapbox】ハッシュタグをラベル風にする【UserCSS】/` へ移動。CSSの内容は変更なし
+- 記事本文の `page.txt` と記事URLの `.url` を追加し、記事READMEに本文内CSSと実装本体の同期方針を記載
+- ルートREADMEのリンクと記事README・TODOの見出しを記事名へ更新し、完了した移行対象をTODOの一覧から削除。既存の機能改善TODOと過去の変更記録は維持
+
 ### 【Scrapbox】右上のページメニューにスクロールバーが表示されるのを防ぐ【UserCSS】
 
 - 記事名を基準にした管理への移行の続きとして、`src/user-css/hide-page-menu-scrollbar/` を `src/user-css/【Scrapbox】右上のページメニューにスクロールバーが表示されるのを防ぐ【UserCSS】/` へ移動。CSSの内容は変更なし
