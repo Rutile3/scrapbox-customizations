@@ -1,4 +1,5 @@
 .page img.image,
+.page img.strong-image,
 .page video.gyazo.image,
 .page .gyazo.oembed > iframe {
   box-sizing: border-box;
