@@ -8,6 +8,7 @@ UserCSSです。白い背景の画像でも、ページ背景との境界を判�
 1. [`style.css`](style.css) の内容をScrapboxのUserCSS記事にある `code:style.css` へコピーする
 2. 対象プロジェクトでUserCSSを有効にする
 3. Scrapboxにアップロードした画像、Gyazo画像、その他の配信元の画像と、縦長・横長を含むGyazo動画の表示を確認する
+4. 二重の角括弧で強調表示したGyazo画像に枠と影が付くことを、リンクあり・なしの両方で確認する
 
 実装の正本は `style.css` です。
 [`page.txt`](page.txt) はScrapbox形式の記事本文で、CSSを変更した場合は
@@ -16,10 +17,11 @@ UserCSSです。白い背景の画像でも、ページ背景との境界を判�
 ## 対象
 
 - `image` クラスを持つ画像（Scrapboxにアップロードした画像、Gyazo画像、その他の配信元の画像）
+- `strong-image` クラスを持つ強調表示画像（二重の角括弧で囲んだ画像）
 - Gyazo動画
 - 形状クラスを問わないGyazo埋め込み動画
 
-`.page` 内の要素だけを対象にしています。画像は `img.image` に一致すれば、
+`.page` 内の要素だけを対象にしています。画像は `img.image` または `img.strong-image` に一致すれば、
 配信元や `alt` 属性を問いません。
 
 ## 関連記事
